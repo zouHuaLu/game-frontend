@@ -1,0 +1,25 @@
+{
+  "vite": {
+    "optimizeDeps": {
+      "include": [
+        "ant-design-vue/es",
+        "ant-design-vue/es/button/style",
+        "ant-design-vue/es/config-provider/style",
+        "ant-design-vue/es/date-picker/style",
+        "ant-design-vue/es/locale/zh_CN",
+        "dayjs",
+        "dayjs/locale/zh-cn",
+        "element-plus/es",
+        "element-plus/es/components/button/style/index",
+        "element-plus/es/components/config-provider/style/index",
+        "element-plus/es/components/date-picker/style/index",
+        "element-plus/es/locale/lang/zh-cn",
+        "pinia",
+        "vant/es",
+        "vant/es/button/style/less",
+        "vue",
+        "vue-router"
+      ]
+    }
+  }
+}

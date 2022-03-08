@@ -11,6 +11,7 @@ module.exports = {
     'no-debugger': 'warn',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/triple-slash-reference': 'off',
     '@typescript-eslint/ban-types': 'off',
