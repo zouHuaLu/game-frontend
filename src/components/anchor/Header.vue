@@ -17,7 +17,6 @@ let showText = reactive({
 <style module>
     .wrap{
         height: 130px;
-        width: 100vw;
         background: linear-gradient(180deg, #EBE8F1 0%, #938AA1 0%, #50475D 100%);
         box-shadow: 0px 2px 8px 0px rgba(17, 19, 32, 0.5);
         border: 1px solid;

@@ -3,8 +3,13 @@ import Game from './components/anchor/Game.vue'
 </script>
 
 <template>
-  <Game msg="Hello Vue 3 + TypeScript + Vite" />
+<div :class="$style.wrap">
+  <Game />
+</div>
 </template>
 
 <style lang="scss" module>
+.wrap{
+  width: 100vw;
+}
 </style>
