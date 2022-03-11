@@ -7,6 +7,7 @@ declare module 'vue' {
     Block: typeof import('./src/components/anchor/Block.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElDatePicker: typeof import('element-plus/es')['ElDatePicker']
+    ElDialog: typeof import('element-plus/es')['ElDialog']
     Game: typeof import('./src/components/anchor/Game.vue')['default']
     GamePlate: typeof import('./src/components/anchor/GamePlate.vue')['default']
     Header: typeof import('./src/components/anchor/Header.vue')['default']

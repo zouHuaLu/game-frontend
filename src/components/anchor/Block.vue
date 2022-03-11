@@ -3,14 +3,44 @@
             <img :class="$style.head_img" src="@/assets/imgs/head.svg" alt="head">
             <div :class="$style.head_num">{{headNum}}</div>
             <div :class="$style.person_num">1</div>
-            <div :class="$style.roster">Roster</div>
+            <div :class="$style.roster" @click="openDialog">Roster</div>
+        </div>
+        <div class="self_dialog">
+            <el-dialog
+                v-model="dialogVisible"
+                width="500px"
+            >
+                <template #title>
+                    <div :class="$style.header">
+                        <img src="@/assets/imgs/winner.svg" alt="winner">
+                        <span :class="$style.title">Winner List</span>
+                    </div>
+                </template>
+                <span>This is a message</span>
+            </el-dialog>
         </div>
 </template>
 <script lang="ts" setup>
+    import {ref} from 'vue'
     defineProps<{headNum:number}>()
-
+    const dialogVisible = ref(false)
+    const openDialog = () => {
+        dialogVisible.value = true
+    }
 </script>
 <style lang="scss" module>
+    .header{
+        width: 500px;
+        background: linear-gradient(360deg, #F9EBB5 0%, #F0D27E 100%);
+        border-radius: 20px 20px 0px 0px;
+        .title{
+            font-size: 36px;
+            font-family: Arial-BoldMT, Arial;
+            font-weight: normal;
+            color: #936D03;
+            line-height: 42px;
+        }
+    }
     .block{
         width: 300px;
         height: 380px;
@@ -62,5 +92,13 @@
         position: absolute;
         bottom: 11px;
         left: 8px;
+    }    
+</style>
+<style lang="css">
+    .self_dialog .el-dialog{
+        border-radius: 20px;
+    }
+    .self_dialog .el-dialog__header{
+        padding: 0;
     }
 </style>

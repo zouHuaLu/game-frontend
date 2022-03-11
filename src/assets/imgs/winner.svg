@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="36px" viewBox="0 0 40 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>路径</title>
+    <defs>
+        <linearGradient x1="50%" y1="-15.2954102%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFE199" offset="0%"></stop>
+            <stop stop-color="#E2B027" offset="75.1508735%"></stop>
+            <stop stop-color="#FFEDC1" offset="100%"></stop>
+        </linearGradient>
+        <path d="M450.136788,254.660337 L448,235.666667 L448,235.666667 L457.902439,242.777778 L466,225 L473.902439,242.777778 L484,235.666667 L481.863212,254.660337 C481.713312,255.992779 480.586425,257 479.245578,257 L452.754422,257 C451.413575,257 450.286688,255.992779 450.136788,254.660337 Z" id="path-2"></path>
+        <filter x="-11.1%" y="-6.2%" width="122.2%" height="125.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.776013361   0 0 0 0 0.571232057   0 0 0 0 0  0 0 0 0.662614729 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="popup" transform="translate(-446.000000, -225.000000)" fill-rule="nonzero">
+            <g id="路径">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>
