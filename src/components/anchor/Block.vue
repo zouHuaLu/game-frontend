@@ -6,14 +6,27 @@
         <div :class="$style.roster" @click="openDialog">Roster</div>
     </div>
     <div class="self_dialog">
-        <el-dialog v-model="dialogVisible" width="500px">
+        <el-dialog v-model="dialogVisible" width="1100px">
             <template #title>
                 <div :class="$style.header">
                     <img src="@/assets/imgs/winner.svg" alt="winner" />
                     <span :class="$style.title">Winner List</span>
                 </div>
             </template>
-            <span>This is a message</span>
+            <div :class="$style.list">
+                <div :class="$style.winner">
+                    <img src="@/assets/imgs/WinnerCup.svg" alt="winnercup" />
+                    <span>SingleMumOfTriplets</span>
+                </div>
+                <div :class="$style.winner">
+                    <img src="@/assets/imgs/WinnerCup.svg" alt="winnercup" />
+                    <span>SingleMumOfTriplets</span>
+                </div>
+                <div :class="$style.winner">
+                    <img src="@/assets/imgs/WinnerCup.svg" alt="winnercup" />
+                    <span>SingleMumOfTriplets</span>
+                </div>
+            </div>
         </el-dialog>
     </div>
 </template>
@@ -27,7 +40,8 @@ const openDialog = () => {
 </script>
 <style lang="scss" module>
 .header {
-    width: 500px;
+    padding: 16px 0 15px 40px;
+    width: 1060px;
     background: linear-gradient(360deg, #f9ebb5 0%, #f0d27e 100%);
     border-radius: 20px 20px 0px 0px;
     .title {
@@ -36,6 +50,7 @@ const openDialog = () => {
         font-weight: normal;
         color: #936d03;
         line-height: 42px;
+        margin-left: 17px;
     }
 }
 .block {
@@ -96,6 +111,32 @@ const openDialog = () => {
     position: absolute;
     bottom: 11px;
     left: 8px;
+}
+.list {
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+    .winner {
+        width: 450px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        img {
+            width: 36px;
+            height: 36px;
+        }
+        span {
+            line-height: 36;
+            font-size: 36px;
+            font-family: PingFangSC-Semibold, PingFang SC;
+            font-weight: 600;
+            color: #000000;
+            line-height: 50px;
+        }
+    }
 }
 </style>
 <style lang="css">

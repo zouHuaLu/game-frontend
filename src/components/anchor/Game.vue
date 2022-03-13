@@ -11,11 +11,11 @@ const count = ref(0)
 <template>
   <Header></Header>
   <div :class="$style.panel">
-    <el-row justify="center" style="align-items: center;">
+    <el-row justify="space-evenly" style="align-items: center;">
       <el-col :span="4">
         <Timer></Timer>
       </el-col>
-      <el-col :span="16">
+      <el-col :span="17">
         <GamePlate></GamePlate>
       </el-col>
     </el-row>
