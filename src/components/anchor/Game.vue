@@ -11,17 +11,23 @@ const count = ref(0)
 <template>
   <Header></Header>
   <div :class="$style.panel">
-    <Timer></Timer>
-    <GamePlate></GamePlate>
+    <el-row justify="center" style="align-items: center;">
+      <el-col :span="4">
+        <Timer></Timer>
+      </el-col>
+      <el-col :span="16">
+        <GamePlate></GamePlate>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <style lang="scss" module>
-  .panel{
-    padding: 75px 100px;
-    background: linear-gradient(180deg, #515A88 0%, #414661 21%, #262B40 100%);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
+.panel {
+  padding: 75px 0;
+  background: linear-gradient(180deg, #515a88 0%, #414661 21%, #262b40 100%);
+  // display: flex;
+  // justify-content: space-around;
+  // align-items: center;
+}
 </style>

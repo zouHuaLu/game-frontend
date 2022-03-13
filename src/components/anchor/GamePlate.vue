@@ -12,21 +12,17 @@
             <BlockVue :head-num="8"></BlockVue>
         </div>
     </div>
-    
 </template>
 <script lang="ts" setup>
-    import BlockVue from './Block.vue';
+import BlockVue from './Block.vue';
 </script>
 <style module lang="scss">
-.wrap{
-    display: flex;
-    flex-direction: column;
+.wrap {
     margin-left: 60px;
 }
-.level{
+.level {
     display: flex;
     flex-direction: row;
     margin-bottom: 25px;
 }
-
 </style>
