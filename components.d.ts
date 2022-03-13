@@ -12,7 +12,11 @@ declare module 'vue' {
     ElForm: typeof import('element-plus/es')['ElForm']
     ElFormItem: typeof import('element-plus/es')['ElFormItem']
     ElInput: typeof import('element-plus/es')['ElInput']
+    ElOption: typeof import('element-plus/es')['ElOption']
     ElRow: typeof import('element-plus/es')['ElRow']
+    ElSelect: typeof import('element-plus/es')['ElSelect']
+    ElTabPane: typeof import('element-plus/es')['ElTabPane']
+    ElTabs: typeof import('element-plus/es')['ElTabs']
     Game: typeof import('./src/components/anchor/Game.vue')['default']
     GamePlate: typeof import('./src/components/anchor/GamePlate.vue')['default']
     Header: typeof import('./src/components/anchor/Header.vue')['default']
@@ -21,6 +25,8 @@ declare module 'vue' {
     Login: typeof import('./src/components/backend/Login.vue')['default']
     Plate: typeof import('./src/components/anchor/Plate.vue')['default']
     Timer: typeof import('./src/components/anchor/Timer.vue')['default']
+    WorkStation: typeof import('./src/components/backend/WorkStation.vue')['default']
+    WorkTabs: typeof import('./src/components/backend/WorkTabs.vue')['default']
   }
 }
 

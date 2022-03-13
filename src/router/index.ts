@@ -11,6 +11,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "login",
     component: () => import("../components/backend/Login.vue"),
   },
+  {
+    path: "/worktabs",
+    name: "worktabs",
+    component: () => import("../components/backend/WorkTabs.vue"),
+  },
 ];
 const router = createRouter({
   history,
