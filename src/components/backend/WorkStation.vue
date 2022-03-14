@@ -22,11 +22,27 @@
             <el-button :class="$style.btn" @click="endGame(ruleFormRef)">结束</el-button>
         </el-form-item>
     </el-form>
+    <div>
+        <div :class="$style.title">选择中奖号码 参与人数</div>
+        <div :class="$style.block_wrap">
+            <template v-for="item in 8">
+                <div
+                    :class="[$style.block, item === activeBlock ? $style.active : '']"
+                    @click="chooseNum(item)"
+                >
+                    <div :class="$style.price_num">{{ item }}</div>
+                    <div :class="$style.people_num">1000</div>
+                </div>
+            </template>
+        </div>
+        <el-button :class="$style.show_result" @click="showResult()">展示结果</el-button>
+    </div>
 </template>
 <script setup lang="ts">
 import { reactive, ref } from 'vue'
 
 const ruleFormRef = ref()
+const activeBlock = ref(0)
 
 const formLabelAlign = reactive({
     time: '',
@@ -53,6 +69,14 @@ const startGame = (formEl) => {
 const endGame = (formEl) => {
     console.log(formEl)
 }
+
+const showResult = () => {
+
+}
+
+const chooseNum = (e) => {
+    activeBlock.value = e
+}
 </script>
 <style module lang="scss">
 .btn {
@@ -60,9 +84,67 @@ const endGame = (formEl) => {
     height: 36px;
     background: linear-gradient(180deg, #bb9bf1 0%, #887bf2 100%);
     border-radius: 4px;
+    font-size: 14px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 14px;
 }
-</style>
-<style>
-.el-form-item__content {
+.title {
+    font-size: 16px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #000000;
+    line-height: 22px;
+}
+.block_wrap {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row;
+}
+.block {
+    width: 80px;
+    height: 76px;
+    background: #ffffff;
+    border-radius: 2px;
+    border: 1px solid #d8dce6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.price_num {
+    font-size: 24px;
+    font-family: Arial-BoldMT, Arial;
+    font-weight: normal;
+    color: #000000;
+    line-height: 28px;
+}
+.people_num {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #000000;
+    line-height: 20px;
+}
+.show_result {
+    margin-top: 36px;
+    width: 90px;
+    height: 36px;
+    background: linear-gradient(180deg, #bb9bf1 0%, #887bf2 100%);
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 14px;
+}
+.active {
+    background: #ffffff;
+    border-radius: 2px;
+    border: 1px solid #887bf2;
 }
 </style>

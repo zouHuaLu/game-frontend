@@ -10,12 +10,15 @@
         <el-tab-pane label="中控操作台" name="workstation">
             <WorkStationVue></WorkStationVue>
         </el-tab-pane>
-        <el-tab-pane label="用户列表" name="users">用户列表</el-tab-pane>
+        <el-tab-pane label="用户列表" name="users">
+            <UserListVue></UserListVue>
+        </el-tab-pane>
     </el-tabs>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
 import WorkStationVue from './WorkStation.vue';
+import UserListVue from './UserList.vue';
 const activeName = ref('workstation')
 
 const handleClick = (tab: string, event: Event) => {
